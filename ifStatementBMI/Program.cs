@@ -4,8 +4,11 @@ Console.WriteLine("enter you weight: ");
 double weight = Convert.ToDouble(Console.ReadLine());
 Console.WriteLine("enter your height in cm: ");
 double height = Convert.ToDouble(Console.ReadLine());
+//double height = Convert.ToDouble(Console.ReadLine())/100;
+//height = height/100;
 double heightInMeter = height / 100;
 double BMI = (weight / Math.Pow(heightInMeter,2) );
+//double BMI = weight / (height * height);
 string BMIState;
 Console.WriteLine("BMI is: " + BMI);
 
@@ -30,6 +33,7 @@ else if (BMI >= 18.5 && BMI <= 24.9)
     BMIState = ("obese");
     Console.WriteLine(BMIState);
 }
+//instead of printing it in each one we could just write the print function at the end using BMIState
 
 // BMI state by age
 Console.WriteLine("enter your age");
@@ -113,3 +117,4 @@ else if (age >= 65)
         Console.WriteLine(BMIState);
     }
 }
+//if ((age>=25 && age <=34)&&(BMI >= 20 && BMI <=25)) we can use this instead
